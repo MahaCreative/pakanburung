@@ -14,7 +14,7 @@ class DataSuhuController extends Controller
      */
     public function index()
     {
-        return DataSuhu::all();
+        return json_encode(DataSuhu::all());
     }
 
     /**
@@ -31,7 +31,7 @@ class DataSuhuController extends Controller
             'temperature' => $request->temperature,
             'humidity' => $request->humidity,
         ]);
-        return $dataSuhu;
+        return json_encode($dataSuhu);
     }
 
     /**
