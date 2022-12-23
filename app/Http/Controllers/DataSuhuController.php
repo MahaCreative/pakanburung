@@ -25,7 +25,7 @@ class DataSuhuController extends Controller
      */
     public function store(Request $request)
     {
-        $dataSuhu = DataSuhu::create([
+        $dataSuhu = DataSuhu::created([
             'tanggal' => $request->tanggal,
             'jam' => $request->jam,
             'temperature' => $request->temperature,
