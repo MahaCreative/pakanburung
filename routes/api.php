@@ -10,5 +10,5 @@ Route::apiResource('jadwal_pakan', JadwalPakan::class);
 Route::get('response', [Response::class, 'index']);
 Route::get('coba', function (\Illuminate\Http\Request $request) {
 
-    return json_encode(['abg' => 'abg']);
+    return 'abg';
 });
