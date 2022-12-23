@@ -14,7 +14,7 @@ class DataSuhuController extends Controller
      */
     public function index()
     {
-        return "aaaa";
+        return "aaaaa";
     }
 
     /**
