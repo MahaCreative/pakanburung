@@ -10,4 +10,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::apiResource('jadwal_pakan', JadwalPakan::class);
 Route::get('response', [Response::class, 'index']);
-Route::apiResource('suhu', DataSuhuController::class);
+Route::apiResource('data-suhu', DataSuhuController::class);
