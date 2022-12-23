@@ -12,4 +12,4 @@ Route::apiResource('jadwal_pakan', JadwalPakan::class);
 Route::get('response', [Response::class, 'index']);
 // Route::apiResource('data-suhu', DataSuhuController::class);
 Route::get('data-suhu', [DataSuhuController::class, 'index']);
-Route::post('data-suhu', [DataSuhuController::class, 'store']);
+Route::post('data-suhu-create', [DataSuhuController::class, 'store']);
