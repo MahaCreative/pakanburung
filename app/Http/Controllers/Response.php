@@ -24,11 +24,6 @@ class Response extends Controller
                 return json_encode([
                     'status_makan' => $StatusMakan
                 ]);
-            } else {
-                $StatusMakan->update(['status' => 'low']);
-                return json_encode([
-                    'status_makan' => $StatusMakan
-                ]);
             }
         }
     }
