@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('dashboard', Dashboard::class)->name('dashboard');
+Route::get('', Dashboard::class)->name('dashboard');
 Route::put('button-set-makan', [StatusMakanController::class, 'button'])->name('status-makan-update');
