@@ -15,9 +15,9 @@ class JadwalPakanSeeder extends Seeder
     public function run()
     {
         DB::table("jadwa_pakans")->insert([
-            ['jam' => '17:13'],
-            ['jam' => '17:14'],
-            ['jam' => '17:15'],
+            ['jam' => '17:16'],
+            ['jam' => '17:17'],
+            ['jam' => '17:18'],
         ]);
     }
 }

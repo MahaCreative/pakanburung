@@ -21,11 +21,11 @@ class Response extends Controller
         foreach ($jadwal as $item) {
             if ($item->jam == now()->format('H:i')) {
                 $StatusMakan->update(['status' => 'high']);
-                return json_encode([
-                    'status_makan' => $StatusMakan
-                ]);
             }
         }
+        return json_encode([
+            'status_makan' => $StatusMakan
+        ]);
     }
 
     /**
