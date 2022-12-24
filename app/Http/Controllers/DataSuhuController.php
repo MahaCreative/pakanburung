@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\DataSuhuSent;
 use App\Models\DataSuhu;
 use Illuminate\Http\Request;
 
@@ -33,6 +34,7 @@ class DataSuhuController extends Controller
             'temperature' => $request->temperature,
             'humidity' => $request->humidity,
         ]);
+        broadcast(new DataSuhuSent($request->temperature, $request->humidity));
         return json_encode($dataSuhu);
     }
 

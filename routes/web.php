@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\StatusMakanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('dashboard', Dashboard::class)->name('dashboard');
+Route::put('button-set-makan', [StatusMakanController::class, 'button'])->name('status-makan-update');
