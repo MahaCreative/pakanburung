@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JadwaPakan;
+use App\Models\StatusMakan;
 use Illuminate\Http\Request;
 
 class Response extends Controller
@@ -13,7 +15,22 @@ class Response extends Controller
      */
     public function index()
     {
-        return json_encode(['abg' => 'ag']);
+        $jadwal = JadwaPakan::get()->take(3);
+        $jam = now()->format('H:i');
+        $StatusMakan = StatusMakan::find(1);
+        foreach ($jadwal as $item) {
+            if ($item->jam == now()->format('H:i')) {
+                $StatusMakan->update(['status' => 'high']);
+                return json_encode([
+                    'status_makan' => $StatusMakan
+                ]);
+            } else {
+                $StatusMakan->update(['status' => 'low']);
+                return json_encode([
+                    'status_makan' => $StatusMakan
+                ]);
+            }
+        }
     }
 
     /**

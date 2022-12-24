@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJadwaPakansTable extends Migration
+class CreateStatusMakansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateJadwaPakansTable extends Migration
      */
     public function up()
     {
-        Schema::create('jadwa_pakans', function (Blueprint $table) {
+        Schema::create('status_makans', function (Blueprint $table) {
             $table->id();
-            $table->string('jam');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateJadwaPakansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jadwa_pakans');
+        Schema::dropIfExists('status_makans');
     }
 }
