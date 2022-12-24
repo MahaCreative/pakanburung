@@ -14,7 +14,8 @@ class DataSuhuController extends Controller
      */
     public function index()
     {
-        return "aaaaa";
+        $dataSuhu = DataSuhu::all();
+        return $dataSuhu;
     }
 
     /**
