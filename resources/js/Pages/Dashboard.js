@@ -10,7 +10,7 @@ export default function Dashboard(props) {
   const { status } = props;
   const [suhus, setSuhu] = useState([])
   console.log(status[0].status);
-  const { data, setData, put } = useForm({ status: status[0].status });
+  const { data, setData, put } = useForm({ status: status[0].status == 'low' ? 'high' : 'low' });
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
     return function cleanup() {

@@ -2290,7 +2290,7 @@ function Dashboard(props) {
     setSuhu = _useState4[1];
   console.log(status[0].status);
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-      status: status[0].status
+      status: status[0].status == 'low' ? 'high' : 'low'
     }),
     data = _useForm.data,
     setData = _useForm.setData,
