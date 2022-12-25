@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\DataSuhuSent;
+use App\Http\Resources\DataSuhu as ResourcesDataSuhu;
 use App\Models\DataSuhu;
 use Illuminate\Http\Request;
 
@@ -13,10 +14,13 @@ class DataSuhuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $dataSuhu = DataSuhu::all();
-        return $dataSuhu;
+        $paginate = $request->paginate;
+        // dd(DataSuhu::count());
+        $datasuhu = DataSuhu::fastPaginate($paginate);
+        // return ResourcesDataSuhu::collection($datasuhu);
+        return inertia('DataSuhu/DataSuhu', ['datasuhu' => ResourcesDataSuhu::collection($datasuhu)]);
     }
 
     /**

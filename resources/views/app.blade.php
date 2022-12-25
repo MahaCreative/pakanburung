@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
 
     <script src="{{ mix('/js/app.js') }}" defer></script>
+    @routes
     @inertiaHead
 </head>
 

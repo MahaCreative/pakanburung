@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class JadwaPakan extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }

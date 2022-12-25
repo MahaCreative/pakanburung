@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import toast, { Toaster } from 'react-hot-toast';
+import { usePage } from '@inertiajs/inertia-react';
 
 export default function App({ children }) {
     const [open, setOpen] = useState(false)
-    
+    const { flash } = usePage().props;
+
+    useEffect(() => {
+        flash.type && toast[flash.type](flash.message);
+    });
   return (
-      <div className='bg-emerald-400 min-h-screen overflow-x-hidden'>
+      <div className='bg-emerald-400 min-h-screen overflow-x-hidden font-electro'>
           <Toaster/>
           <div>
               <Navbar />
