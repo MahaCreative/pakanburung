@@ -2279,6 +2279,12 @@ function Dashboard(props) {
     _useState4 = _slicedToArray(_useState3, 2),
     suhus = _useState4[0],
     setSuhu = _useState4[1];
+  var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.useForm)({
+      status: ''
+    }),
+    data = _useForm.data,
+    setData = _useForm.setData,
+    put = _useForm.put;
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     var timerID = setInterval(function () {
       return tick();
@@ -2296,6 +2302,9 @@ function Dashboard(props) {
     });
     console.log(e);
   });
+  function statusHandler() {
+    post(route('status_makan_update'));
+  }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "flex justify-center w-full px-8",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
@@ -2308,6 +2317,7 @@ function Dashboard(props) {
             timeZone: 'Asia/Jakarta'
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          onClick: statusHandler,
           className: "hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-red-500 p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "Beri Pakan"

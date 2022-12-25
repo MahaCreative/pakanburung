@@ -1,5 +1,5 @@
 import { Inertia } from '@inertiajs/inertia';
-import { usePage } from '@inertiajs/inertia-react';
+import { useForm, usePage } from '@inertiajs/inertia-react';
 import React, { useEffect, useState } from 'react'
 
 import App from '../Layout/App'
@@ -7,7 +7,7 @@ export default function Dashboard(props) {
   const [date, setDate] = useState(new Date());
   const { suhu } = props;
   const [suhus, setSuhu] = useState([])
-
+  const { data, setData, put } = useForm({ status: '' });
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
     return function cleanup() {
@@ -20,13 +20,16 @@ export default function Dashboard(props) {
   Echo.channel('data-suhu').listen('DataSuhuSent', (e) => {
     Inertia.reload({ preserveScroll: true })
     console.log(e);
-});
+  });
+  function statusHandler() {
+    post(route('status_makan_update'))
+  }
   return (
     <div className='flex justify-center w-full px-8'>
       <div className='w-full'>
         <div className='flex items-center justify-center gap-2'>
           <p className='bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-emerald-400 p-3 my-3 font-electro text-3xl font-semibold'>{date.toLocaleTimeString('ID', { timeZone: 'Asia/Jakarta' })}</p>
-          <div className='hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-red-500 p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between'>
+          <div onClick={statusHandler} className='hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-red-500 p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between'>
             <p>Beri Pakan</p>
             <div className='h-6 w-6 rounded-full bg-red-400 border-dashed border-4 border-spacing-5 border-white '/>
           </div>
