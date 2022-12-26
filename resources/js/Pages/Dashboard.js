@@ -24,11 +24,11 @@ export default function Dashboard(props) {
     Inertia.reload({ preserveScroll: true })
     
   });
-  Echo.channel('status').listen('StatusMakanSent', (e) => {
+  // Echo.channel('status').listen('StatusMakanSent', (e) => {
     
-    Inertia.reload({ preserveScroll: true })
+  //   Inertia.reload({ preserveScroll: true })
     
-  });
+  // });
   var icon = '';
   let textcuaca = 'Cuaca Normal';
   if (suhu.length > 0) {
