@@ -56,12 +56,12 @@ export default function Dashboard(props) {
         <div className='flex items-center justify-center gap-2'>
         
           <p className='bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-emerald-400 p-3 my-3 font-electro text-3xl font-semibold'>{date.toLocaleTimeString('ID', { timeZone: 'Asia/Jakarta' })}</p>
-          <button onClick={() => statusHandler(status[0].status ==='low' ? 'high' : 'low')} className={clsx
-            (status[0].status == 'low' ? "text-red-500" : 'text-emerald-400',
+          <button onClick={() => statusHandler(status[0].status ==='mati' ? 'aktif' : 'mati')} className={clsx
+            (status[0].status == 'mati' ? "text-red-500" : 'text-emerald-400',
               'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between')}>
             <p>Beri Pakan</p>
             <div className={clsx(
-              status[0].status == 'low' ? "bg-red-400" : 'bg-emerald-400',
+              status[0].status == 'mati' ? "bg-red-400" : 'bg-emerald-400',
               'h-6 w-6 rounded-full  border-dashed border-4 border-spacing-5 border-white ')} />
           </button>
         </div>

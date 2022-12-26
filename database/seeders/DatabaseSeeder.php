@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        StatusMakan::create(['status' => "off"]);
+        StatusMakan::create(['status' => "mati"]);
         User::create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
