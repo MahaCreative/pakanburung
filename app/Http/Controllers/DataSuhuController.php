@@ -18,7 +18,12 @@ class DataSuhuController extends Controller
     {
         $paginate = $request->paginate;
         // dd(DataSuhu::count());
-        $datasuhu = DataSuhu::fastPaginate($paginate);
+        $search = $request->search;
+        if ($search == '') {
+            $datasuhu = DataSuhu::fastPaginate($paginate);
+        } else {
+            $datasuhu = DataSuhu::where('tanggal', 'like', '%' . $search . '%')->fastPaginate($paginate);
+        }
         // return ResourcesDataSuhu::collection($datasuhu);
         return inertia('DataSuhu/DataSuhu', ['datasuhu' => ResourcesDataSuhu::collection($datasuhu)]);
     }
@@ -38,7 +43,7 @@ class DataSuhuController extends Controller
             'temperature' => $request->temperature,
             'humidity' => $request->humidity,
         ]);
-        broadcast(new DataSuhuSent($request->temperature, $request->humidity));
+        broadcast(new DataSuhuSent($request->temperature, $request->humidity))->toOthers();
         return json_encode($dataSuhu);
     }
 

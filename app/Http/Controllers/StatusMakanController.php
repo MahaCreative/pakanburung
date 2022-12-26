@@ -13,13 +13,6 @@ class StatusMakanController extends Controller
 
         $status = StatusMakan::find(1);
         $status->update(['status' => $request->status]);
-        broadcast(new StatusMakanSent($status));
-        session()->put([
-            'flash' =>
-            [
-                'type' => 'success',
-                'message' => 'Proses Berhasil'
-            ]
-        ]);
+        broadcast(new StatusMakanSent($status))->toOthers();
     }
 }

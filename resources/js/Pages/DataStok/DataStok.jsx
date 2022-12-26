@@ -4,15 +4,15 @@ import Table from '../../Components/Table'
 import Pagination from '../../Components/Pagination'
 import { debounce } from 'lodash'
 import { Inertia } from '@inertiajs/inertia'
-export default function DataSuhu(props) {
+export default function DataStok(props) {
     const [params, setParams] = useState({paginate:'', search:""})
-    const { data: datasuhu, meta, links } = props.datasuhu
+    const { data: datastok, meta, links } = props.datastok
     
     // Fitur Live Search
     const reload = useCallback(
         debounce((query) => {
             Inertia.get(
-                route('data-suhu'),
+                route('data-stok'),
                 query,
                 { preserveState: true },
                 150
@@ -21,10 +21,8 @@ export default function DataSuhu(props) {
         []
     )
     useEffect(() => reload(params), [params])
-    Echo.channel('data-suhu').listen('DataSuhuSent', (e) => {
-        Inertia.reload({ preserveScroll: true })
-        
-      });
+
+
   return (
       <div className='px-9 py-2.5'>
           {/* <p className='italic text-base text-white'>Data Suhu Terkini</p> */}
@@ -46,20 +44,17 @@ export default function DataSuhu(props) {
                 <Table.Td>No</Table.Td>
                 <Table.Td>Tanggal</Table.Td>
                 <Table.Td>Jam</Table.Td>
-                <Table.Td>Temperature</Table.Td>
-                <Table.Td>Humidity</Table.Td>
+                <Table.Td>Stok</Table.Td>
             </tr>
             </Table.Thead>
             <Table.Tbody>
-            {datasuhu ? (
-                datasuhu.map((item, key) => (
+            {datastok ? (
+                datastok.map((item, key) => (
                 <tr key={key} className='odd:hover:bg-emerald-300 even:hover:bg-emerald-200'>
                     <Table.Td>{key +1}</Table.Td>
                     <Table.Td>{item.tanggal}</Table.Td>
                     <Table.Td>{item.jam}</Table.Td>
-                    <Table.Td>{item.temperature}</Table.Td>
-                    <Table.Td>{item.humidity}</Table.Td>
-                    
+                    <Table.Td>{item.stok} %</Table.Td>     
                 </tr>
                 
                 ))
@@ -73,4 +68,4 @@ export default function DataSuhu(props) {
   )
 }
 
-DataSuhu.layout = (page) => <App children={page}/>
+DataStok.layout = (page) => <App children={page}/>

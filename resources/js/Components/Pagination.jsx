@@ -102,8 +102,8 @@ function PaginateLink({ active, href, children }) {
         <li>
             <Link
                 className={clsx(
-                    active && 'text-blue-600 border-blue-300 bg-blue-50',
-                    'w-11 h-9 text-sm font-semibold rounded shadow-sm border flex items-center justify-center'
+                    active && 'text-slate-700 border-slate-500 bg-slate-300',
+                    'w-11 bg-white h-9 text-sm font-semibold rounded shadow-sm border flex items-center justify-center'
                 )}
                 href={href}
             >

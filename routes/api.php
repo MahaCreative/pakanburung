@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DataStokController;
 use App\Http\Controllers\DataSuhuController;
 use App\Http\Controllers\JadwalPakan;
 use App\Http\Controllers\Response;
@@ -10,4 +11,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('response', [Response::class, 'index']);
-Route::apiResource('data-suhu', DataSuhuController::class);
+Route::post('data-suhu', [DataSuhuController::class, 'store']);
+Route::post('data-stok', [DataStokController::class, 'store']);
