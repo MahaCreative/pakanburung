@@ -33,7 +33,7 @@ export default function Dashboard(props) {
   let textcuaca = 'Cuaca Normal';
   if (suhu.length > 0) {
     if (suhu[0].temperature >= 35) {
-      icon = <img src='images/sun.png' className='w-52 md:w-44 lg:w-52' />
+      icon = <img src='/images/sun.png' className='w-52 md:w-44 lg:w-52' />
       textcuaca='Cuaca Panas'
     } else {
       icon = <img src='images/cool.png' className='w-52 md:w-44 lg:w-52' />
@@ -88,7 +88,7 @@ export default function Dashboard(props) {
                   <p className='text-base md:text-md lg:text-xl font-electro'>{date.toDateString()}</p>
               </p>
               <div className='flex gap-3 items-center'>
-                <img src='images/air.png' className='w-6' />
+                <img src='/images/air.png' className='w-6' />
                 <p className='text-base md:text-md lg:text-xl font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} %</p>
               </div>
               </div>
@@ -118,7 +118,7 @@ export default function Dashboard(props) {
                   <p className='text-base md:text-md lg:text-xl font-electro'>{date.toDateString()}</p>
               </p>
               <div className='flex gap-3 items-center'>
-                <img src='images/air.png' className='w-6' />
+                <img src='/images/air.png' className='w-6' />
                 <p className='text-base md:text-md lg:text-xl font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} %</p>
               </div>
               </div>
@@ -148,7 +148,7 @@ export default function Dashboard(props) {
               </p>
               </div>
               <div className='px-10'>
-                <img src='images/food.png' className='w-52 md:w-44 lg:w-52'/>
+                <img src='/images/food.png' className='w-52 md:w-44 lg:w-52'/>
               </div>
             </div>
           </div>

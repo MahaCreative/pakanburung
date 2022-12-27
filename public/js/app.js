@@ -3081,7 +3081,7 @@ function Dashboard(props) {
   if (suhu.length > 0) {
     if (suhu[0].temperature >= 35) {
       icon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-        src: "images/sun.png",
+        src: "/images/sun.png",
         className: "w-52 md:w-44 lg:w-52"
       });
       textcuaca = 'Cuaca Panas';
@@ -3179,7 +3179,7 @@ function Dashboard(props) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                 className: "flex gap-3 items-center",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                  src: "images/air.png",
+                  src: "/images/air.png",
                   className: "w-6"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
                   className: "text-base md:text-md lg:text-xl font-electro",
@@ -3240,7 +3240,7 @@ function Dashboard(props) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                 className: "flex gap-3 items-center",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                  src: "images/air.png",
+                  src: "/images/air.png",
                   className: "w-6"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
                   className: "text-base md:text-md lg:text-xl font-electro",
@@ -3298,7 +3298,7 @@ function Dashboard(props) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "px-10",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                src: "images/food.png",
+                src: "/images/food.png",
                 className: "w-52 md:w-44 lg:w-52"
               })
             })]
