@@ -73,7 +73,7 @@ export default function Dashboard(props) {
               <p>{date.toLocaleTimeString('ID', { timeZone: 'Asia/Jakarta' })}</p>
             </div>
             <div className='flex items-center justify-center flex-col h-36 bg-gray-50 shadow-emerald-400/30 shadow-sm'>
-              <p className='text-7xl font-bold font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} <span>&#8451;</span></p>
+              <p className='text-xl md:text-5xl lg:text-7xl font-bold font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} <span>&#8451;</span></p>
               <p> {textcuaca}</p>
             </div>
             
@@ -85,11 +85,11 @@ export default function Dashboard(props) {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
                 </svg>
               </span>
-                  <p className='text-2xl font-electro'>{date.toDateString()}</p>
+                  <p className='text-base md:text-md lg:text-xl font-electro'>{date.toDateString()}</p>
               </p>
               <div className='flex gap-3 items-center'>
                 <img src='images/air.png' className='w-6' />
-                <p className='text-2xl font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} %</p>
+                <p className='text-base md:text-md lg:text-xl font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} %</p>
               </div>
               </div>
               <div className='px-10'>
@@ -104,7 +104,7 @@ export default function Dashboard(props) {
               <p>{date.toLocaleTimeString('ID', { timeZone: 'Asia/Jakarta' })}</p>
             </div>
             <div className='flex items-center justify-center flex-col h-36 bg-gray-50 shadow-emerald-400/30 shadow-sm'>
-              <p className='text-7xl font-bold font-electro'>{suhu.length > 0 ? suhu[0].humidity : '0'} <span>&#8451;</span></p>
+              <p className='text-xl md:text-5xl lg:text-7xl font-bold font-electro'>{suhu.length > 0 ? suhu[0].humidity : '0'} <span>&#8451;</span></p>
               <p> {textcuaca}</p>
             </div>
             <div className='flex items-center justify-between gap-3 px-6 my-3'>
@@ -115,11 +115,11 @@ export default function Dashboard(props) {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
                 </svg>
               </span>
-                  <p className='text-2xl font-electro'>{date.toDateString()}</p>
+                  <p className='text-base md:text-md lg:text-xl font-electro'>{date.toDateString()}</p>
               </p>
               <div className='flex gap-3 items-center'>
                 <img src='images/air.png' className='w-6' />
-                <p className='text-2xl font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} %</p>
+                <p className='text-base md:text-md lg:text-xl font-electro'>{suhu.length > 0 ? suhu[0].temperature : '0'} %</p>
               </div>
               </div>
               <div className='px-10'>
@@ -134,7 +134,7 @@ export default function Dashboard(props) {
               <p>{date.toLocaleTimeString('ID', { timeZone: 'Asia/Jakarta' })}</p>
             </div>
             <div className='flex items-center justify-center flex-col h-36 bg-gray-50 shadow-emerald-400/30 shadow-sm'>
-              <p className='text-7xl font-bold font-electro'>{stok.length > 0 ? stok[0].stok : '0'} %</p>
+              <p className='text-xl md:text-5xl lg:text-7xl font-bold font-electro'>{stok.length > 0 ? stok[0].stok : '0'} %</p>
             </div>
             <div className='flex items-center justify-between gap-3 px-6 my-3'>
               <div className='flex flex-col gap-3 justify-center '>
@@ -144,7 +144,7 @@ export default function Dashboard(props) {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
                 </svg>
               </span>
-                  <p className='text-2xl font-electro'>{date.toDateString()}</p>
+                  <p className='text-base md:text-md lg:text-xl font-electro'>{date.toDateString()}</p>
               </p>
               </div>
               <div className='px-10'>

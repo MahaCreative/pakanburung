@@ -10,6 +10,8 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StatusMakanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Salman\Mqtt\Facades\Mqtt as FacadesMqtt;
+use Salman\Mqtt\MqttClass\Mqtt;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +50,12 @@ Route::get('forgot-password', [ForgotPasswordController::class, 'index'])->name(
 Route::post('forgot-password', [ForgotPasswordController::class, 'email_store'])->name('forgot-password');
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'reset_password'])->name('password.reset');
 Route::post('reset-password-store', [ForgotPasswordController::class, 'reset_password_store'])->name('password.update');
+
+Route::get('sent-mqtt', function () {
+    FacadesMqtt::ConnectAndSubscribe('sentSuhu', function ($topic, $msg) {
+        echo "Msg Received: \n";
+        echo "Topic: {$topic}\n\n";
+        echo "\t$msg\n\n";
+    }, 1);
+    FacadesMqtt::loop(true);
+});
