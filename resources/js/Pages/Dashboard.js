@@ -58,7 +58,7 @@ export default function Dashboard(props) {
           <p className='bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-emerald-400 p-3 my-3 font-electro text-3xl font-semibold'>{date.toLocaleTimeString('ID', { timeZone: 'Asia/Jakarta' })}</p>
           <button onClick={() => statusHandler(status[0].status ==='mati' ? 'aktif' : 'mati')} className={clsx
             (status[0].status == 'mati' ? "text-red-500" : 'text-emerald-400',
-              'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between')}>
+              'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-lg md:text-xl lg:text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between')}>
             <p>Beri Pakan</p>
             <div className={clsx(
               status[0].status == 'mati' ? "bg-red-400" : 'bg-emerald-400',

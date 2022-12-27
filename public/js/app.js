@@ -3121,7 +3121,7 @@ function Dashboard(props) {
           onClick: function onClick() {
             return statusHandler(status[0].status === 'mati' ? 'aktif' : 'mati');
           },
-          className: (0,clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(status[0].status == 'mati' ? "text-red-500" : 'text-emerald-400', 'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between'),
+          className: (0,clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(status[0].status == 'mati' ? "text-red-500" : 'text-emerald-400', 'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-lg md:text-xl lg:text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between'),
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
             children: "Beri Pakan"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
