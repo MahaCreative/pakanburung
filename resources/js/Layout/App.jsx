@@ -11,7 +11,7 @@ export default function App({ children }) {
         flash.type && toast[flash.type](flash.message);
     });
   return (
-      <div className=' bg-emerald-400 min-h-screen overflow-x-hidden font-electro'>
+      <div className='bg-emerald-400 min-h-screen overflow-x-hidden font-electro'>
           <Toaster/>
           <div>
               <Navbar />
