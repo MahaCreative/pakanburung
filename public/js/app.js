@@ -2759,7 +2759,7 @@ function App(_ref) {
     flash.type && react_hot_toast__WEBPACK_IMPORTED_MODULE_2__["default"][flash.type](flash.message);
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "touch-none bg-emerald-400 min-h-screen overflow-x-hidden font-electro",
+    className: "bg-emerald-400 min-h-screen overflow-x-hidden font-electro",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_hot_toast__WEBPACK_IMPORTED_MODULE_2__.Toaster, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: " min-h-screen w-full",
@@ -3119,13 +3119,13 @@ function Dashboard(props) {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
           onClick: function onClick() {
-            return statusHandler(status[0].status === 'low' ? 'high' : 'low');
+            return statusHandler(status[0].status === 'mati' ? 'aktif' : 'mati');
           },
-          className: (0,clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(status[0].status == 'low' ? "text-red-500" : 'text-emerald-400', 'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between'),
+          className: (0,clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(status[0].status == 'mati' ? "text-red-500" : 'text-emerald-400', 'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between'),
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
             children: "Beri Pakan"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            className: (0,clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(status[0].status == 'low' ? "bg-red-400" : 'bg-emerald-400', 'h-6 w-6 rounded-full  border-dashed border-4 border-spacing-5 border-white ')
+            className: (0,clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(status[0].status == 'mati' ? "bg-red-400" : 'bg-emerald-400', 'h-6 w-6 rounded-full  border-dashed border-4 border-spacing-5 border-white ')
           })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -3145,7 +3145,7 @@ function Dashboard(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "flex items-center justify-center flex-col h-36 bg-gray-50 shadow-emerald-400/30 shadow-sm",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-              className: "text-7xl font-bold font-electro",
+              className: "text-xl md:text-5xl lg:text-7xl font-bold font-electro",
               children: [suhu.length > 0 ? suhu[0].temperature : '0', " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
                 children: "\u2103"
               })]
@@ -3173,7 +3173,7 @@ function Dashboard(props) {
                     })
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-                  className: "text-2xl font-electro",
+                  className: "text-base md:text-md lg:text-xl font-electro",
                   children: date.toDateString()
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -3182,7 +3182,7 @@ function Dashboard(props) {
                   src: "images/air.png",
                   className: "w-6"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                  className: "text-2xl font-electro",
+                  className: "text-base md:text-md lg:text-xl font-electro",
                   children: [suhu.length > 0 ? suhu[0].temperature : '0', " %"]
                 })]
               })]
@@ -3206,7 +3206,7 @@ function Dashboard(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "flex items-center justify-center flex-col h-36 bg-gray-50 shadow-emerald-400/30 shadow-sm",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-              className: "text-7xl font-bold font-electro",
+              className: "text-xl md:text-5xl lg:text-7xl font-bold font-electro",
               children: [suhu.length > 0 ? suhu[0].humidity : '0', " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
                 children: "\u2103"
               })]
@@ -3234,7 +3234,7 @@ function Dashboard(props) {
                     })
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-                  className: "text-2xl font-electro",
+                  className: "text-base md:text-md lg:text-xl font-electro",
                   children: date.toDateString()
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -3243,7 +3243,7 @@ function Dashboard(props) {
                   src: "images/air.png",
                   className: "w-6"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                  className: "text-2xl font-electro",
+                  className: "text-base md:text-md lg:text-xl font-electro",
                   children: [suhu.length > 0 ? suhu[0].temperature : '0', " %"]
                 })]
               })]
@@ -3267,7 +3267,7 @@ function Dashboard(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             className: "flex items-center justify-center flex-col h-36 bg-gray-50 shadow-emerald-400/30 shadow-sm",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-              className: "text-7xl font-bold font-electro",
+              className: "text-xl md:text-5xl lg:text-7xl font-bold font-electro",
               children: [stok.length > 0 ? stok[0].stok : '0', " %"]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -3291,7 +3291,7 @@ function Dashboard(props) {
                     })
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-                  className: "text-2xl font-electro",
+                  className: "text-base md:text-md lg:text-xl font-electro",
                   children: date.toDateString()
                 })]
               })
