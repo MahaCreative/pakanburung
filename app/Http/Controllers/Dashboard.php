@@ -20,7 +20,7 @@ class Dashboard extends Controller
         $dataSuhu = DataSuhu::latest()->get()->take(1);
         $status = StatusMakan::latest()->get()->take(1);
         $stok = DataStok::latest()->get()->take(1);
-        // dd($stok);
+        // dd(now()->format('h:i'));
         // dd($status[0]->status);
         $jam = now()->format('H:i:sa');
         return inertia('Dashboard', ["suhu" => $dataSuhu, 'status' => $status, 'stok' => $stok]);
