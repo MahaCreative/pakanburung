@@ -10,7 +10,7 @@ export default function Dashboard(props) {
   const { status } = props;
   const { stok } = props;
   const [suhus, setSuhu] = useState([])
-  const { data, setData, put } = useForm({ status: status[0].status });
+  const { data, setData, put } = useForm({ status: status[0].status ==='mati' ? 'aktif' : 'mati' });
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
     return function cleanup() {
@@ -24,10 +24,12 @@ export default function Dashboard(props) {
     Inertia.reload({ preserveScroll: true })
     
   });
-  Echo.channel('status').listen('StatusMakanSent', (e) => {
-    
+  Echo.channel('data-stok').listen('DataStokEvent', (e) => {
     Inertia.reload({ preserveScroll: true })
-    
+    console.log('g');
+  });
+  Echo.channel('status').listen('StatusMakanSent', (e) => {
+    Inertia.reload({ preserveScroll: true })
   });
   var icon = '';
   let textcuaca = 'Cuaca Normal';
@@ -56,7 +58,7 @@ export default function Dashboard(props) {
         <div className='flex items-center justify-center gap-2'>
         
           <p className='bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-emerald-400 p-3 my-3 font-electro text-3xl font-semibold'>{date.toLocaleTimeString('ID', { timeZone: 'Asia/Jakarta' })}</p>
-          <button onClick={() => statusHandler(status[0].status ==='mati' ? 'aktif' : 'mati')} className={clsx
+          <button type='submit' onClick={() => statusHandler(status[0].status ==='mati' ? 'aktif' : 'mati')} className={clsx
             (status[0].status == 'mati' ? "text-red-500" : 'text-emerald-400',
               'hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-lg md:text-xl lg:text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between')}>
             <p>Beri Pakan</p>

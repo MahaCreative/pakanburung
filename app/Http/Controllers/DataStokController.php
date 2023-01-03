@@ -28,7 +28,7 @@ class DataStokController extends Controller
             'jam' => now()->format('h:i:sa'),
             'stok' => $request->stok,
         ]);
-        broadcast(new DataStokEvent($datastok))->toOthers();
+        broadcast(new DataStokEvent($datastok));
         return json_encode($datastok);
     }
 }

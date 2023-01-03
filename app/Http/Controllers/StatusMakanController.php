@@ -12,10 +12,11 @@ class StatusMakanController extends Controller
 {
     public function button(Request $request)
     {
-
+        // dd($request->status);
         $status = StatusMakan::find(1);
         $status->update(['status' => $request->status]);
-        // dispatch(SentMqtt)
+        // dd($status);
+        dispatch(new SentMqtt($status->status));
         broadcast(new StatusMakanSent($status))->toOthers();
     }
 }

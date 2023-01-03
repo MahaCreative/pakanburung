@@ -3050,7 +3050,7 @@ function Dashboard(props) {
     suhus = _useState4[0],
     setSuhu = _useState4[1];
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-      status: status[0].status
+      status: status[0].status === 'mati' ? 'aktif' : 'mati'
     }),
     data = _useForm.data,
     setData = _useForm.setData,
@@ -3070,6 +3070,12 @@ function Dashboard(props) {
     _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.reload({
       preserveScroll: true
     });
+  });
+  Echo.channel('data-stok').listen('DataStokEvent', function (e) {
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.reload({
+      preserveScroll: true
+    });
+    console.log('g');
   });
   Echo.channel('status').listen('StatusMakanSent', function (e) {
     _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.reload({
@@ -3118,6 +3124,7 @@ function Dashboard(props) {
             timeZone: 'Asia/Jakarta'
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
+          type: "submit",
           onClick: function onClick() {
             return statusHandler(status[0].status === 'mati' ? 'aktif' : 'mati');
           },

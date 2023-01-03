@@ -14,14 +14,11 @@ class SentMqtt implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    /**
-     * Create a new job instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    protected $timeout;
+    protected $status;
+    public function __construct($status)
     {
-        //
+        $this->status = $status;
     }
 
     /**
@@ -34,6 +31,6 @@ class SentMqtt implements ShouldQueue
         //
         $mqtt = new Mqtt();
 
-        $output = $mqtt->ConnectAndPublish('sentSuhu', 'aktif');
+        $output = $mqtt->ConnectAndPublish('sentSuhu', $this->status);
     }
 }

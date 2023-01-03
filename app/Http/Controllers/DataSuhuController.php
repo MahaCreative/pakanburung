@@ -43,7 +43,7 @@ class DataSuhuController extends Controller
             'temperature' => $request->temperature,
             'humidity' => $request->humidity,
         ]);
-        broadcast(new DataSuhuSent($request->temperature, $request->humidity))->toOthers();
+        broadcast(new DataSuhuSent($request->temperature, $request->humidity));
         return json_encode($dataSuhu);
     }
 
