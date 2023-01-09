@@ -3140,7 +3140,7 @@ function Dashboard(props) {
           })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-        className: "flex md:flex-row flex-col items-center gap-3 my-5",
+        className: "flex lg:flex-row flex-col items-center gap-3 my-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           className: "bg-white w-[100%] h-[400px] md:w-1/2 rounded-lg py-2.5 px-4 flex-col",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -3775,7 +3775,7 @@ function JadwalPakan(_ref) {
     className: "px-9 py-2.5",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        size: 'w-[25%]',
+        size: 'w-[90%] md:w-80% lg:w-[50%]',
         trigger: addTrigger,
         closeModal: addModalClose,
         headerTitle: 'Tambah Jadwal Pakan Burung',
@@ -3783,7 +3783,7 @@ function JadwalPakan(_ref) {
           close: addModalClose
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        size: 'w-[25%]',
+        size: 'w-[90%] md:w-80% lg:w-[50%]',
         trigger: editTrigger,
         closeModal: editModalClose,
         headerTitle: 'Edit Jadwal Pakan Burung',
@@ -3792,7 +3792,7 @@ function JadwalPakan(_ref) {
           close: editModalClose
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_Components_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        size: 'w-[25%]',
+        size: 'w-[90%] md:w-80% lg:w-[50%]',
         trigger: deletTrigger,
         closeModal: deletModalClose,
         headerTitle: 'Delete Jadwal Pakan Burung',

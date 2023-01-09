@@ -31,13 +31,13 @@ export default function JadwalPakan({ jadwal_pakan }) {
     <div className='px-9 py-2.5'>
 
       <div>
-        <Modal size={'w-[25%]'} trigger={addTrigger} closeModal={addModalClose} headerTitle={'Tambah Jadwal Pakan Burung'}>
+        <Modal size={'w-[90%] md:w-80% lg:w-[50%]'} trigger={addTrigger} closeModal={addModalClose} headerTitle={'Tambah Jadwal Pakan Burung'}>
           <Create close={ addModalClose} />
         </Modal>
-        <Modal size={'w-[25%]'} trigger={editTrigger} closeModal={editModalClose} headerTitle={'Edit Jadwal Pakan Burung'}>
+        <Modal size={'w-[90%] md:w-80% lg:w-[50%]'} trigger={editTrigger} closeModal={editModalClose} headerTitle={'Edit Jadwal Pakan Burung'}>
           <Update model={params} close={ editModalClose} />
         </Modal>
-        <Modal size={'w-[25%]'} trigger={deletTrigger} closeModal={deletModalClose} headerTitle={'Delete Jadwal Pakan Burung'}>
+        <Modal size={'w-[90%] md:w-80% lg:w-[50%]'} trigger={deletTrigger} closeModal={deletModalClose} headerTitle={'Delete Jadwal Pakan Burung'}>
           <p>Yakin Ingin Mengahpus Data</p>
           <div className="flex gap-3 items-center">
             <button onClick={deleteHandler} className='bg-slate-700 block text-white rounded-lg py-2 px-4 hover:shadow-sm hover:shadow-emerald-300'>Submit</button>

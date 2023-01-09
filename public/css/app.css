@@ -1140,6 +1140,10 @@ video {
     width: 50%;
   }
 
+  .md\:w-80 {
+    width: 20rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1190,6 +1194,10 @@ video {
 
   .lg\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:px-8 {

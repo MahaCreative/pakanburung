@@ -67,7 +67,7 @@ export default function Dashboard(props) {
               'h-6 w-6 rounded-full  border-dashed border-4 border-spacing-5 border-white ')} />
           </button>
         </div>
-        <div className='flex md:flex-row flex-col items-center gap-3 my-5'>
+        <div className='flex lg:flex-row flex-col items-center gap-3 my-5'>
           {/* suhu */}
           <div className='bg-white w-[100%] h-[400px] md:w-1/2 rounded-lg py-2.5 px-4 flex-col'>
             <div className='flex justify-between px-2'>
