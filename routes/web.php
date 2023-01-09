@@ -24,7 +24,7 @@ use Salman\Mqtt\MqttClass\Mqtt;
 |
 */
 
-Route::middleware('auth', function () {
+Route::middleware('auth')->group(function () {
     Route::get('', Dashboard::class)->name('dashboard');
     Route::get('data-suhu', [DataSuhuController::class, 'index'])->name('data-suhu');
     Route::get('data-stok', [DataStokController::class, 'index'])->name('data-stok');
