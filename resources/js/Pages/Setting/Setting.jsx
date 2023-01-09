@@ -13,11 +13,10 @@ export default function Setting() {
     return (
       <div className='w-full min-h-screen bg-emerald-400 flex items-center justify-between px-16 font-electro gap-3'>
           <div className='flex'>
-              <div className='flex flex-col w-[500px] justify-center'>
+              <div className='hidden lg:flex flex-col w-[500px] justify-center'>
                   <img src="images/burung.png" alt="" className=' w-[80%]' />
-                  
               </div>
-              <div className='ml-16 rounded-lg w-[520px] bg-white shadow-sm shadow-slate-400 backdrop-blur-sm px-8 py-2.5'>
+              <div className='ml-4 md:ml-16 rounded-lg w-[95%] md:w-[80%] bg-white shadow-sm shadow-slate-400 backdrop-blur-sm px-8 py-2.5'>
                     <p className='text-4xl font-bold text-emerald-400 border-b-4 border-emerald-400 py-2.5 border-dashed'>Aplikasi Pakan Burung</p>
                   <p className='text-emerald-400 my-2'>Setting User Account</p>
                   <div className="border border-emerald-400 p-4 my-3 rounded-lg border-dashed shadow-md shadow-gray-500/50">
