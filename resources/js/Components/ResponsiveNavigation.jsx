@@ -50,7 +50,13 @@ export default function ResponsiveNavigation() {
                         href={route('data-suhu')}
                         as="button"
                     >
-                        Data Suhu
+                        Setting Profile
+                    </DropdownMenu.Link>
+                    <DropdownMenu.Link
+                        href={route('setting')}
+                        as="button"
+                    >
+                        Setting Profile
                     </DropdownMenu.Link>
                     <DropdownMenu.Link
                         href={route('logout')}
