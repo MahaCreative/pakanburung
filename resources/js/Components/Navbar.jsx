@@ -29,6 +29,7 @@ export default function Navbar() {
                                     active={route().current('jadwal-pakan')}>Jadwal Pakan</NavLink>
                                 <NavLink active={route().current('data-stok')} href={route('data-stok')}>Data Stok</NavLink>
                                 <NavLink active={route().current('data-suhu')} href={route('data-suhu')}>Data Suhu</NavLink>
+                                <NavLink active={route().current('setting')} href={route('setting')}>Setting Profile</NavLink>
                                 <NavLink method="POST"
                         as="button" active={route().current('logout')} href={route('logout')}>Logout</NavLink>
                             </div>

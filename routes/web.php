@@ -24,25 +24,26 @@ use Salman\Mqtt\MqttClass\Mqtt;
 |
 */
 
-Route::get('', Dashboard::class)->name('dashboard');
-Route::get('data-suhu', [DataSuhuController::class, 'index'])->name('data-suhu');
-Route::get('data-stok', [DataStokController::class, 'index'])->name('data-stok');
-Route::put('button-set-makan', [StatusMakanController::class, 'button'])->name('status-makan-update');
-Route::get('jadwal-pakan', [JadwalPakanController::class, 'index'])->name('jadwal-pakan');
-Route::post('jadwal-pakan', [JadwalPakanController::class, 'store']);
-Route::put('jadwal-pakan', [JadwalPakanController::class, 'update'])->name('jadwal-pakan-update');
-Route::delete('jadwal-pakan', [JadwalPakanController::class, 'delete'])->name('jadwal-pakan-delete');
-Route::get('setting-profile', [SettingController::class, 'index'])->name('setting');
-Route::post('setting-profile-update', [SettingController::class, 'update'])->name('setting-update');
+Route::group()->middleware('auth', function () {
+    Route::get('', Dashboard::class)->name('dashboard');
+    Route::get('data-suhu', [DataSuhuController::class, 'index'])->name('data-suhu');
+    Route::get('data-stok', [DataStokController::class, 'index'])->name('data-stok');
+    Route::put('button-set-makan', [StatusMakanController::class, 'button'])->name('status-makan-update');
+    Route::get('jadwal-pakan', [JadwalPakanController::class, 'index'])->name('jadwal-pakan');
+    Route::post('jadwal-pakan', [JadwalPakanController::class, 'store']);
+    Route::put('jadwal-pakan', [JadwalPakanController::class, 'update'])->name('jadwal-pakan-update');
+    Route::delete('jadwal-pakan', [JadwalPakanController::class, 'delete'])->name('jadwal-pakan-delete');
+    Route::get('setting-profile', [SettingController::class, 'index'])->name('setting');
+    Route::post('setting-profile-update', [SettingController::class, 'update'])->name('setting-update');
 
-Route::post('logout', function () {
-    Auth::logout();
-    return redirect()->route('login')->with([
-        'type' => 'success',
-        'message' => 'Berhasil Logout'
-    ]);
-})->name('logout');
-
+    Route::post('logout', function () {
+        Auth::logout();
+        return redirect()->route('login')->with([
+            'type' => 'success',
+            'message' => 'Berhasil Logout'
+        ]);
+    })->name('logout');
+});
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'store']);

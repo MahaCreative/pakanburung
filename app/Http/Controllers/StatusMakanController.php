@@ -14,7 +14,7 @@ class StatusMakanController extends Controller
     {
         // dd($request->status);
         $status = StatusMakan::find(1);
-        $status->update(['status' => $request->status]);
+        $status->update(['status' => 'aktif']);
         // dd($status);
         dispatch(new SentMqtt($status->status));
         broadcast(new StatusMakanSent($status))->toOthers();

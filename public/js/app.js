@@ -2333,6 +2333,10 @@ function Navbar() {
                 href: route('data-suhu'),
                 children: "Data Suhu"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavLink__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                active: route().current('setting'),
+                href: route('setting'),
+                children: "Setting Profile"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavLink__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 method: "POST",
                 as: "button",
                 active: route().current('logout'),
