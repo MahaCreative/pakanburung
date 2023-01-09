@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Jobs\SentMqtt;
 use App\Models\JadwaPakan;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -18,13 +19,18 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $jadwal = JadwaPakan::all();
-        foreach ($jadwal as $item) {
-            if ($item->jam == now()->format('h:i')) {
-                $schedule->call(function () {
-                })->dailyAt($item->jam)->runInBackground();
+        $schedule->call(function () {
+            $jadwal = JadwaPakan::all();
+            foreach ($jadwal as $item) {
+                // dd($item->jam == now()->format('h:i'));
+                // dd(now()->format('H:I'));
+                if ($item->jam == now()->format('H:i')) {
+                    dispatch(new SentMqtt('aktif'));
+                }
             }
-        }
+        })->everyMinute()->runInBackground();
+
+        // dd($item->jam);
     }
 
     /**

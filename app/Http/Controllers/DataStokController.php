@@ -23,6 +23,7 @@ class DataStokController extends Controller
     }
     public function store(Request $request)
     {
+        // dd(now()->format('H:i'));
         $datastok = DataStok::create([
             'tanggal' => now()->format('d-m-Y'),
             'jam' => now()->format('h:i:sa'),
