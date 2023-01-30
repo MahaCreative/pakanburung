@@ -62,7 +62,7 @@ export default function Dashboard(props) {
         <div className="flex justify-center w-full px-8">
             <div className="w-full">
                 <div className="flex items-center justify-center gap-2">
-                    <p className="bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-emerald-400 p-3 my-3 font-electro text-3xl font-semibold">
+                    <p className="text-sm bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200 text-emerald-400 p-3 my-3 font-electro md:text-3xl font-semibold">
                         {date.toLocaleTimeString("ID", {
                             timeZone: "Asia/Jakarta",
                         })}
@@ -74,7 +74,7 @@ export default function Dashboard(props) {
                             status[0].status == "mati"
                                 ? "text-red-500"
                                 : "text-emerald-400",
-                            "hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-lg md:text-xl lg:text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between"
+                            " hover:cursor-pointer bg-slate-700 w-[200px] text-center rounded-lg shadow-sm shadow-gray-200  p-3 my-3 font-electro text-md md:text-xl lg:text-3xl font-semibold hover:bg-slate-800 flex items-center justify-between"
                         )}
                     >
                         <p>Beri Pakan</p>
