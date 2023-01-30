@@ -55,7 +55,9 @@ export default function Dashboard(props) {
         console.log(data);
         put("button-set-makan");
     };
-
+    useEffect(() => {
+        setData({ ...data, status : status ? status[0].status : '',
+    }, status)
     return (
         <div className="flex justify-center w-full px-8">
             <div className="w-full">
